@@ -9,6 +9,7 @@ export default function TextForm(props) {
         // console.log("Uppercase Was Clicked");
         let NewText = text.toUpperCase();
         setText(NewText);
+        props.showAlert("Converted To Upper Case","success");
     }
 
     const Onnchange = (event)=> {
@@ -21,12 +22,14 @@ export default function TextForm(props) {
         // console.log("Lowercase Was Clicked");
         let NewText = text.toLowerCase();
         setText(NewText);
+        props.showAlert("Converted To Lower Case","success");
     }
 
     const ClearHandle = (e)=> {
         e.preventDefault();  //To Stop page from Reloading
         let Newtext = "";
         setText(Newtext);
+        props.showAlert("Text Cleared","success");
     }
 
     return (
